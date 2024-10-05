@@ -1,0 +1,21 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-Ludam_Dare_56.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"W:\Game Dev\LD56\Ludam_Dare_56\Intermediate\Build\Win64\x64\Ludam_Dare_56Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"W:\Game Dev\LD56\Ludam_Dare_56\Intermediate\Build\Win64\x64\UnrealEditor\Development\Ludam_Dare_56\Ludam_Dare_56.init.gen.cpp.obj"
+"W:\Game Dev\LD56\Ludam_Dare_56\Intermediate\Build\Win64\x64\UnrealEditor\Development\Ludam_Dare_56\OurSave.gen.cpp.obj"
+"W:\Game Dev\LD56\Ludam_Dare_56\Intermediate\Build\Win64\x64\UnrealEditor\Development\Ludam_Dare_56\PlayerCharacter.gen.cpp.obj"
+"W:\Game Dev\LD56\Ludam_Dare_56\Intermediate\Build\Win64\x64\UnrealEditor\Development\Ludam_Dare_56\PlayerMovementComponent.gen.cpp.obj"
+"W:\Game Dev\LD56\Ludam_Dare_56\Intermediate\Build\Win64\x64\UnrealEditor\Development\Ludam_Dare_56\SoundSettings.gen.cpp.obj"
+"W:\Game Dev\LD56\Ludam_Dare_56\Intermediate\Build\Win64\x64\UnrealEditor\Development\Ludam_Dare_56\Ludam_Dare_56.cpp.obj"
+"W:\Game Dev\LD56\Ludam_Dare_56\Intermediate\Build\Win64\x64\UnrealEditor\Development\Ludam_Dare_56\OurSave .cpp.obj"
+"W:\Game Dev\LD56\Ludam_Dare_56\Intermediate\Build\Win64\x64\UnrealEditor\Development\Ludam_Dare_56\SoundSettings.cpp.obj"
+"W:\Game Dev\LD56\Ludam_Dare_56\Intermediate\Build\Win64\x64\UnrealEditor\Development\Ludam_Dare_56\PlayerCharacter.cpp.obj"
+"W:\Game Dev\LD56\Ludam_Dare_56\Intermediate\Build\Win64\x64\UnrealEditor\Development\Ludam_Dare_56\PlayerMovementComponent.cpp.obj"
+"W:\Game Dev\LD56\Ludam_Dare_56\Intermediate\Build\Win64\x64\UnrealEditor\Development\Ludam_Dare_56\Default.rc2.res"
+/OUT:"W:\Game Dev\LD56\Ludam_Dare_56\Intermediate\Build\Win64\x64\UnrealEditor\Development\Ludam_Dare_56\UnrealEditor-Ludam_Dare_56.lib"

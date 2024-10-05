@@ -1,0 +1,25 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "w:\\game dev\\ld56\\ludam_dare_56\\intermediate\\build\\win64\\unrealeditor\\inc\\ludam_dare_56\\uht\\playercharacter.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "w:\\game dev\\ld56\\ludam_dare_56\\intermediate\\build\\win64\\x64\\ludam_dare_56editor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "w:\\game dev\\ld56\\ludam_dare_56\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ludam_dare_56\\definitions.ludam_dare_56.h",
+            "w:\\game dev\\ld56\\ludam_dare_56\\source\\ludam_dare_56\\playercharacter.h",
+            "d:\\epic games\\engine versions\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
+            "d:\\epic games\\engine versions\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
+            "d:\\epic games\\engine versions\\ue_5.4\\engine\\source\\runtime\\experimental\\iris\\core\\public\\iris\\serialization\\irisobjectreferencepackagemap.h",
+            "d:\\epic games\\engine versions\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\iriscore\\uht\\irisobjectreferencepackagemap.generated.h",
+            "d:\\epic games\\engine versions\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementreplication.generated.h",
+            "d:\\epic games\\engine versions\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
+            "d:\\epic games\\engine versions\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rootmotionsource.generated.h",
+            "d:\\epic games\\engine versions\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h",
+            "w:\\game dev\\ld56\\ludam_dare_56\\source\\ludam_dare_56\\playermovementcomponent.h",
+            "w:\\game dev\\ld56\\ludam_dare_56\\intermediate\\build\\win64\\unrealeditor\\inc\\ludam_dare_56\\uht\\playermovementcomponent.generated.h",
+            "w:\\game dev\\ld56\\ludam_dare_56\\intermediate\\build\\win64\\unrealeditor\\inc\\ludam_dare_56\\uht\\playercharacter.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
