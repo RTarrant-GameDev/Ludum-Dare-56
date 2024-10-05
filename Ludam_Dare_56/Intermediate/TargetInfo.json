@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Ludam_Dare_56",
+			"Path": "..\\Source\\Ludam_Dare_56.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "Ludam_Dare_56Editor",
+			"Path": "..\\Source\\Ludam_Dare_56Editor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

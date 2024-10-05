@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "w:\\game dev\\ld56\\ludam_dare_56\\intermediate\\build\\win64\\unrealeditor\\inc\\ludam_dare_56\\uht\\oursave.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "w:\\game dev\\ld56\\ludam_dare_56\\intermediate\\build\\win64\\x64\\ludam_dare_56editor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "w:\\game dev\\ld56\\ludam_dare_56\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ludam_dare_56\\definitions.ludam_dare_56.h",
+            "w:\\game dev\\ld56\\ludam_dare_56\\source\\ludam_dare_56\\oursave.h",
+            "d:\\epic games\\engine versions\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\savegame.h",
+            "d:\\epic games\\engine versions\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\savegame.generated.h",
+            "w:\\game dev\\ld56\\ludam_dare_56\\source\\ludam_dare_56\\soundsettings.h",
+            "w:\\game dev\\ld56\\ludam_dare_56\\intermediate\\build\\win64\\unrealeditor\\inc\\ludam_dare_56\\uht\\soundsettings.generated.h",
+            "w:\\game dev\\ld56\\ludam_dare_56\\intermediate\\build\\win64\\unrealeditor\\inc\\ludam_dare_56\\uht\\oursave.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

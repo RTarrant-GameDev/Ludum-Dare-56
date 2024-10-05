@@ -1,0 +1,13 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "w:\\game dev\\ld56\\ludam_dare_56\\intermediate\\build\\win64\\unrealeditor\\inc\\ludam_dare_56\\uht\\ludam_dare_56.init.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "w:\\game dev\\ld56\\ludam_dare_56\\intermediate\\build\\win64\\x64\\ludam_dare_56editor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "w:\\game dev\\ld56\\ludam_dare_56\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ludam_dare_56\\definitions.ludam_dare_56.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
