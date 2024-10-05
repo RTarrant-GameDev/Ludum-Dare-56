@@ -8,7 +8,8 @@ public class Ludam_Dare_56 : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput", "UMG" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput", "EventLoop", "UMG" });
+
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 
