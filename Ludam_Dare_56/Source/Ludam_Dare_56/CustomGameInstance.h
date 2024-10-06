@@ -25,6 +25,7 @@ public:
 		TPair<TEnumAsByte<ELevel>, FName >(EGameplay, FName("")),
 		TPair<TEnumAsByte<ELevel>, FName >(ECredits, FName(""))
 	};
+	UPROPERTY(BlueprintReadWrite)
 	FSoundSettings m_Sound;
 	FScoreSystem m_score;
 	UFUNCTION(BlueprintCallable)
