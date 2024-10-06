@@ -48,6 +48,7 @@ void UMenuBase::HorizontalInput(const bool Right)
 	float NewVal = slider->GetValue();
 	NewVal += Right ? 0.1f : -0.1f;
 	NewVal = FMath::Clamp(NewVal, slider->GetMinValue(), slider->GetMaxValue());
+	OnSliderChangedDelegate.Broadcast();
 	slider->SetValue(NewVal);
 }
 

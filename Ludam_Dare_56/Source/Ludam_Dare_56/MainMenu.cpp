@@ -1,4 +1,5 @@
 #include "MainMenu.h"
+#include "CustomGameInstance.h"
 
 void UMainMenuWidget::NativeConstruct()
 {
@@ -139,5 +140,15 @@ bool UMainMenuWidget::Initialize()
 		}
 	}
 	m_menuBaseFunc->m_menuStack.Add(EMainMenuSections::ERoot);
+	for (TObjectIterator<UGameInstance> itr; itr; ++itr)
+	{
+		UCustomGameInstance* GI = Cast<UCustomGameInstance>(*itr);
+		if (GI)
+		{
+			m_menuBaseFunc->OnSliderChangedDelegate.AddUniqueDynamic(GI, &UCustomGameInstance::SetSound);
+			GI->SetSound();
+			break;
+		}
+	}
 	return true;
 }

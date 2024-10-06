@@ -22,19 +22,19 @@ class LUDAM_DARE_56_API USaveDataFunctions : public UBlueprintFunctionLibrary
 	GENERATED_BODY()
 public:
 	UFUNCTION(BlueprintCallable)
-	float GetMusicVolume(const FSoundSettings& SoundSettings) const;
+	static float GetMusicVolume(const FSoundSettings& SoundSettings);
 	UFUNCTION(BlueprintCallable)
-	float GetSoundEffectsVolume(const FSoundSettings& SoundSettings) const;
+	static float GetSoundEffectsVolume(const FSoundSettings& SoundSettings);
 	UFUNCTION(BlueprintCallable)
-	float GetMasterVolume(const FSoundSettings& SoundSettings) const;
+	static float GetMasterVolume(const FSoundSettings& SoundSettings);
 	UFUNCTION(BlueprintCallable)
-	float GetMusicVolumeUnadjusted(const FSoundSettings& SoundSettings) const;
+	static float GetMusicVolumeUnadjusted(const FSoundSettings& SoundSettings);
 	UFUNCTION(BlueprintCallable)
-	float GetSoundVolumeUnadjusted(const FSoundSettings& SoundSettings) const;
+	static float GetSoundVolumeUnadjusted(const FSoundSettings& SoundSettings);
 	UFUNCTION(BlueprintCallable)
-	void SetMusicVolume(FSoundSettings& SoundSettings, const float NewVal) const;
+	static void SetMusicVolume(FSoundSettings& SoundSettings, const float NewVal);
 	UFUNCTION(BlueprintCallable)
-	void SetSoundEffectVolume(FSoundSettings& SoundSettings, const float NewVal) const;
+	static void SetSoundEffectVolume(FSoundSettings& SoundSettings, const float NewVal);
 	UFUNCTION(BlueprintCallable)
-	void SetMasterVolume(FSoundSettings& SoundSettings, const float NewVal) const;
+	static void SetMasterVolume(FSoundSettings& SoundSettings, const float NewVal);
 };

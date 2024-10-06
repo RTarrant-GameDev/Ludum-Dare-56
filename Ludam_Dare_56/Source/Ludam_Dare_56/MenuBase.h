@@ -19,6 +19,8 @@
 #include "InputAction.h"
 #include "MenuBase.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnSliderHasChangedSignature);
+
 constexpr float MenuUnselectedSize = 1.f;
 constexpr float MenuSelectedSize = 1.25;
 
@@ -27,6 +29,7 @@ const FLinearColor MenuSelectedColor = FLinearColor::Yellow;
 
 const FAnchors SubMenuAnchors = FAnchors(0.40);
 const FVector2D SubMenuSize = FVector2D(400, 50);
+
 
 UENUM()
 enum EMainMenuSections : uint8
@@ -79,6 +82,8 @@ public:
 	TMap<TEnumAsByte<EMainMenuSections>, FSubMenu> m_menuSections;
 	UPROPERTY(EditAnywhere)
 	TMap<UButton*, FMenuButtonFunc> m_buttonFunctionMap;
+	UPROPERTY(BlueprintAssignable)
+	FOnSliderHasChangedSignature OnSliderChangedDelegate;
 	UPROPERTY(EditAnywhere)
 	bool enabled = true;
 public:
