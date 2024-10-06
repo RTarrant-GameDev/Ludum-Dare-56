@@ -4,14 +4,29 @@
 #include "CoreMinimal.h"
 #include "SoundSettings.h"
 #include "MainMenu.h"
+#include "Score.h"
 #include "CustomGameInstance.generated.h"
+
+UENUM()
+enum ELevel : uint8
+{
+	EMainMenu,
+	EGameplay,
+	ECredits
+};
 
 UCLASS(BlueprintType)
 class UCustomGameInstance : public UGameInstance
 {
 	GENERATED_BODY()
 public:
+	TMap<TEnumAsByte<ELevel>, FName> m_levels{
+		TPair<TEnumAsByte<ELevel>, FName > (EMainMenu, FName("")),
+		TPair<TEnumAsByte<ELevel>, FName >(EGameplay, FName("")),
+		TPair<TEnumAsByte<ELevel>, FName >(ECredits, FName(""))
+	};
 	FSoundSettings m_Sound;
+	FScoreSystem m_score;
 	UFUNCTION(BlueprintCallable)
 	void SetSound()
 	{

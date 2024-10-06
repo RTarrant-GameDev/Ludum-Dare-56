@@ -14,6 +14,15 @@ struct FDummy
 constexpr float LvlCharMultiplier = 0.3f;
 constexpr float LvlTimeMultiplier = 0.1f;
 
+USTRUCT(BlueprintType)
+struct FScoreSystem
+{
+	GENERATED_BODY()
+public:
+	float m_totalScore = 0.f;
+	float m_currentScore = 0.f;
+};
+
 UCLASS(BlueprintType)
 class UScoreComp : public UActorComponent
 {
