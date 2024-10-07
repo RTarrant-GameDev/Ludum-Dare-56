@@ -92,7 +92,7 @@ bool UMainMenuWidget::Initialize()
 			SoundTextBlock->SetColorAndOpacity(MenuUnselectedColor);
 			SoundTextBlock->SetText(FText::FromString(Name));
 			USlider* SoundSlider = WidgetTree->ConstructWidget<USlider>(USlider::StaticClass(), FName(Name + FString("Slider")));
-			SoundSlider->SetMinValue(0.f);
+			SoundSlider->SetMinValue(0.1f);
 			SoundSlider->SetMaxValue(1.f);
 			SoundSlider->SetValue(0.5f);
 			Box->AddChildToHorizontalBox(SoundTextBlock);
