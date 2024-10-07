@@ -5,6 +5,7 @@
 #include "SoundSettings.h"
 #include "MainMenu.h"
 #include "Score.h"
+#include "Kismet/GameplayStatics.h"
 #include "CustomGameInstance.generated.h"
 
 UENUM()
@@ -20,13 +21,21 @@ class UCustomGameInstance : public UGameInstance
 {
 	GENERATED_BODY()
 public:
+	UPROPERTY(BlueprintReadWrite)
 	TMap<TEnumAsByte<ELevel>, FName> m_levels{
 		TPair<TEnumAsByte<ELevel>, FName > (EMainMenu, FName("")),
 		TPair<TEnumAsByte<ELevel>, FName >(EGameplay, FName("")),
 		TPair<TEnumAsByte<ELevel>, FName >(ECredits, FName(""))
 	};
 	UPROPERTY(BlueprintReadWrite)
+	TArray<FName> m_gameplayLevels;
+	UPROPERTY(BlueprintReadWrite)
+	unsigned int m_currentLevel = 0;
+	UPROPERTY(BlueprintReadWrite)
+	unsigned int m_highestLevel = 0;
+	UPROPERTY(BlueprintReadWrite)
 	FSoundSettings m_Sound;
+	UPROPERTY(BlueprintReadWrite)
 	FScoreSystem m_score;
 	UFUNCTION(BlueprintCallable)
 	void SetSound()
@@ -59,5 +68,16 @@ public:
 			}
 		}
 	}
-	
+	UFUNCTION(BlueprintCallable)
+	void GoToLevel(const TEnumAsByte<ELevel> NewLevel, int level)
+	{
+		if (NewLevel == ELevel::EGameplay)
+		{
+			level = FMath::Clamp(level, 0, m_gameplayLevels.Num() - 1);
+			m_currentLevel = level;
+			UGameplayStatics::OpenLevel(GetWorld(), m_gameplayLevels[level]);
+			return;
+		}
+		UGameplayStatics::OpenLevel(GetWorld(), *m_levels.Find(NewLevel));
+	}
 };
