@@ -1,4 +1,5 @@
 #include "MenuBase.h"
+#include "CustomGameInstance.h"
 
 void UMenuBase::GoBack()
 {
@@ -26,6 +27,25 @@ void UMenuBase::QuitGameToDeskTop(const TEnumAsByte<EMainMenuSections> DummyPara
 {
 	if (!enabled) return;
 	FPlatformMisc::RequestExit(false);
+}
+
+void UMenuBase::GoToLevel(const TEnumAsByte<EMainMenuSections> LevelToGoTo)
+{
+	//UWorld* world = GetWorld();
+	UGameInstance* gi = UGameplayStatics::GetGameInstance(world);
+	UCustomGameInstance* instance = Cast<UCustomGameInstance>(gi);
+	if (!instance)
+	{
+		return;
+	}
+	switch (LevelToGoTo)
+	{
+	case EMainMenuSections::ERoot:
+		instance->GoToLevel(ELevel::EMainMenu);
+		return;
+	default:
+		instance->GoToLevel(ELevel::EGameplay, int(LevelToGoTo) - 1);
+	}
 }
 
 void UMenuBase::HorizontalInput(const bool Right)

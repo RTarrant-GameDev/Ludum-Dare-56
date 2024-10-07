@@ -21,21 +21,21 @@ class UCustomGameInstance : public UGameInstance
 {
 	GENERATED_BODY()
 public:
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	TMap<TEnumAsByte<ELevel>, FName> m_levels{
 		TPair<TEnumAsByte<ELevel>, FName > (EMainMenu, FName("")),
 		TPair<TEnumAsByte<ELevel>, FName >(EGameplay, FName("")),
 		TPair<TEnumAsByte<ELevel>, FName >(ECredits, FName(""))
 	};
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	TArray<FName> m_gameplayLevels;
-	UPROPERTY(BlueprintReadWrite)
-	unsigned int m_currentLevel = 0;
-	UPROPERTY(BlueprintReadWrite)
-	unsigned int m_highestLevel = 0;
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int m_currentLevel = 0;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int m_highestLevel = 0;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	FSoundSettings m_Sound;
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	FScoreSystem m_score;
 	UFUNCTION(BlueprintCallable)
 	void SetSound()
@@ -69,7 +69,12 @@ public:
 		}
 	}
 	UFUNCTION(BlueprintCallable)
-	void GoToLevel(const TEnumAsByte<ELevel> NewLevel, int level)
+	void GoTONextLevel()
+	{
+		GoToLevel(ELevel::EGameplay, m_currentLevel + 1);
+	}
+	UFUNCTION(BlueprintCallable)
+	void GoToLevel(const TEnumAsByte<ELevel> NewLevel, int level = 0)
 	{
 		if (NewLevel == ELevel::EGameplay)
 		{

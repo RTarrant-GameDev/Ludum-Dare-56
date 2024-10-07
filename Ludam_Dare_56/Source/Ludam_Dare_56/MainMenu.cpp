@@ -58,6 +58,7 @@ bool UMainMenuWidget::Initialize()
 		UButton* SettingsButton;
 		GenButton(SettingsButton, FString("Settings"));
 
+		m_menuBaseFunc->m_buttonFunctionMap.Add(TPair<UButton*, FMenuButtonFunc>(StartButton, FMenuButtonFunc{ EMainMenuSections::EMain, &UMenuBase::GoToLevel }));
 		m_menuBaseFunc->m_buttonFunctionMap.Add(TPair<UButton*, FMenuButtonFunc>(SettingsButton, FMenuButtonFunc{ EMainMenuSections::ESettings, &UMenuBase::GoForward }));
 
 		m_main->AddChildToVerticalBox(SettingsButton);

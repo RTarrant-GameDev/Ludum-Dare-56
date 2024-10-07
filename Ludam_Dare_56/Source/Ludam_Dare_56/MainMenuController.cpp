@@ -9,6 +9,7 @@ void AMainMenuController::BeginPlay()
 {
 	Super::BeginPlay();
 	m_menu->AddToViewport();
+	m_menu->m_menuBaseFunc->world = GetWorld();
 }
 
 void AMainMenuController::SetupInputComponent()

@@ -36,7 +36,8 @@ enum EMainMenuSections : uint8
 {
 	ERoot,
 	EMain,
-	ESettings
+	ESettings,
+	EMenuSectionNum
 };
 
 USTRUCT(BlueprintType)
@@ -84,6 +85,7 @@ public:
 	TMap<UButton*, FMenuButtonFunc> m_buttonFunctionMap;
 	UPROPERTY(BlueprintAssignable)
 	FOnSliderHasChangedSignature OnSliderChangedDelegate;
+	UWorld* world = nullptr;
 	UPROPERTY(EditAnywhere)
 	bool enabled = true;
 public:
@@ -93,6 +95,8 @@ public:
 	void GoForward(const TEnumAsByte<EMainMenuSections> NextSection);
 	UFUNCTION(BlueprintCallable)
 	void QuitGameToDeskTop(const TEnumAsByte<EMainMenuSections> DummyParam);
+	UFUNCTION(BlueprintCallable)
+	void GoToLevel(const TEnumAsByte<EMainMenuSections> LevelToGoTo);
 	UFUNCTION(BlueprintCallable)
 	void HorizontalInput(const bool Right);
 	UFUNCTION(BlueprintCallable)
